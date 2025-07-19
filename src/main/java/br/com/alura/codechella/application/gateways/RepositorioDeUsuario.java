@@ -4,9 +4,13 @@ import br.com.alura.codechella.domain.entities.usuario.Usuario;
 
 import java.util.List;
 
-public interface UsuarioRepository {
+public interface RepositorioDeUsuario {
 
     Usuario cadastrarUsuario(Usuario usuario);
 
     List<Usuario> listarTodos();
+
+    Usuario atualizarPeloCpf(String cpf, Usuario usuario);
+
+    void excluiUsuario(String cpf);
 }
